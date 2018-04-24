@@ -4,7 +4,7 @@
 Vagrant.configure("2") do |config|
 
     # BOX SETTINGS
-    config.vm.box = "sternpunkt/jimmybox"
+    config.vm.box_url = "https://s3.eu-central-1.amazonaws.com/jimmybox/jimmybox_20_internal.box"
 
     # NETWORKING
     ############################################################################
@@ -28,11 +28,11 @@ Vagrant.configure("2") do |config|
     ############################################################################
 
     # DEFAULT:
-    config.vm.synced_folder "./public", "/var/www", :mount_options => ["dmode=777", "fmode=777"]
+    # config.vm.synced_folder "~/Sites", "/var/www", :mount_options => ["dmode=777", "fmode=777"]
 
     # NFS:
     # you should try NFS share - it performs much better than the default synced folder!
-    # config.vm.synced_folder "./public", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=777"] }
+    config.vm.synced_folder "~/Sites", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=777"] }
 
     # RSYNC:
     # if you are using a framework that contains many files rsync can provide best performance

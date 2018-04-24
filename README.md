@@ -1,14 +1,14 @@
 ![alt tag](https://raw.githubusercontent.com/JarJarBernie/jimmybox/master/public/src/jimmybox.png)
 
-# jimmybox 2.0: web developer box with multiple PHP Versions
-vagrant box for PHP Developers with IonCube Integration for professional web development. Works with Shopware and many other applications and frameworks such as Magento, Oxid 6, Wordpress, Typo3 or Laravel 5.6.
+# jimmybox 2.0 (only for internal usage!)
+vagrant box for PHP Developers with IonCube Integration for professional web development. Works with Shopware and many other applications and frameworks such as Magento, Oxid 6, Wordpress, Typo3 or Laravel 5.6.
 
 ## Quick Setup:
 1) Get the latest Versions of Vagrant and Virtual Box
 
 2) clone the latest version and run vagrant up
 ```bash
-git clone https://github.com/JarJarBernie/jimmybox.git .
+git clone https://sternpunkti@bitbucket.org/JarJarBernie/jimmybox.git -b releases/internal .
 vagrant up
 ```
 
