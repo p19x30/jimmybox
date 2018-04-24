@@ -8,7 +8,7 @@ vagrant box for PHP Developers with IonCube Integration for professional web 
 
 2) clone the latest version and run vagrant up
 ```bash
-git clone https://JarJarBernie@bitbucket.org/sternpunkt/jimmybox.git -b releases/internal .
+git clone https://sternpunkti@bitbucket.org/sternpunkt/jimmybox.git -b releases/internal .
 vagrant up
 ```
 
