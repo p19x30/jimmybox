@@ -4,8 +4,25 @@
 #######################
 
 # fmoser.at
+# -------------------
 sudo cp /usr/local/vagrant/hosts/421-fmoser.conf /etc/apache2/sites-available/
-sudo a2ensite 421-fmoser.conf
+
+if [ -d "/var/www/fmoser.at" ]; then
+    sudo a2ensite 421-fmoser.conf
+else
+    sudo a2dissite 421-fmoser.conf
+fi
+
+# easy-holiday.at
+# -------------------
+# sudo cp /usr/local/vagrant/hosts/005-easyholiday.conf /etc/apache2/sites-available/
+
+if [ -d "/var/www/easy-holiday.at" ]; then
+    sudo a2ensite 005-easyholiday.conf
+else
+    sudo a2dissite 005-easyholiday.conf
+fi
+
 
 # restart apache
 sudo service apache2 restart
