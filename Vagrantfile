@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     config.vm.hostname = "jimmy"
 
     # Private Network
-    config.vm.network "private_network", ip: "192.168.33.10"
+    config.vm.network "private_network", ip: "192.168.33.20"
 
     # port forwarding must be enabled for vagrant share
     config.vm.network "forwarded_port", guest: 80, host: 8080, auto_correct: true
