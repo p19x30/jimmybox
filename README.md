@@ -1,7 +1,7 @@
 ![alt tag](https://raw.githubusercontent.com/JarJarBernie/jimmybox/master/public/src/jimmybox.png)
 
 # jimmybox 2.0 (only for internal usage!)
-vagrant box for PHP Developers with IonCube Integration for professional web development. Works with Shopware and many other applications and frameworks such as Magento, Oxid 6, Wordpress, Typo3 or Laravel 5.6.
+vagrant box for PHP Developers with IonCube Integration for professional web development. Works with Shopware and many other applications and frameworks such as Magento, Oxid 6, Wordpress, Typo3 or Laravel 5.6.
 
 ## Quick Setup:
 1) Get the latest Versions of Vagrant and Virtual Box
@@ -12,7 +12,7 @@ git clone https://sternpunkti@bitbucket.org/sternpunkt/jimmybox.git -b releases/
 vagrant up
 ```
 
-3) open **192.168.33.11** in your browser (default PHP Version is 7.2)
+3) open **192.168.33.20** in your browser (default PHP Version is 7.2)
 
 (IP can be changed in your Vagrantfile, the "public" directory is your document root)
 
@@ -71,16 +71,16 @@ Jimmybox comes with preconfigured virtual hosts to use multiple PHP Versions fro
 
 ```bash
 # PHP 5.6
-192.168.33.11  jimmy56.com
+192.168.33.20  jimmy56.com
 
 # PHP 7.0
-192.168.33.11  jimmy70.com
+192.168.33.20  jimmy70.com
 
 # PHP 7.1
-192.168.33.11  jimmy71.com
+192.168.33.20  jimmy71.com
 
 # PHP 7.2
-192.168.33.11  jimmy72.com
+192.168.33.20  jimmy72.com
 ```
 
 #### open Jimmybox in your browser
