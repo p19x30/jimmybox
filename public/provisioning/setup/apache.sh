@@ -34,6 +34,15 @@ else
     sudo a2dissite 005-easyholiday.conf
 fi
 
+# vomfeld.at
+# -------------------
+sudo cp /usr/local/vagrant/hosts/423-vomfeld.conf /etc/apache2/sites-available/
+
+if [ -d "/var/www/vomfeld.at" ]; then
+    sudo a2ensite 423-vomfeld.conf
+else
+    sudo a2dissite 423-vomfeld.conf
+fi
 
 # restart apache
 sudo service apache2 restart
