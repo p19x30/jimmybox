@@ -55,4 +55,6 @@ Vagrant.configure("2") do |config|
     # Execute the apache setup scripts
     config.vm.provision "shell", path: "./public/provisioning/setup/apache.sh"
 
+    # Execute php Setups
+    config.vm.provision "shell", path: "./public/provisioning/setup/php.sh"
 end
