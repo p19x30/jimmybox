@@ -64,5 +64,15 @@ else
     sudo a2dissite 425-sternpunkt.conf
 fi
 
+# alle-noten.de
+# -------------------
+sudo cp /usr/local/vagrant/hosts/426-* /etc/apache2/sites-available/
+
+if [ -d "/var/www/alle-noten.de" ]; then
+    sudo a2ensite 426-*
+else
+    sudo a2dissite 426-*
+fi
+
 # restart apache
 sudo service apache2 restart
