@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
 
     # NFS:
     # you should try NFS share - it performs much better than the default synced folder!
-    config.vm.synced_folder "~/Sites", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=777"] }
+    config.vm.synced_folder "~/Sites", "/var/www", type: 'nfs', mount_options: ['rw', 'vers=3', 'tcp', 'fsc' ,'actimeo=1']
 
     # RSYNC:
     # if you are using a framework that contains many files rsync can provide best performance
