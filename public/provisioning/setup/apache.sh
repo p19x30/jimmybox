@@ -48,7 +48,7 @@ fi
 # -------------------
 sudo cp /usr/local/vagrant/hosts/424-leanschi.conf /etc/apache2/sites-available/
 
-if [ -d "/var/www/leanschi.at" ]; then
+if [ -d "/var/www/leanschi.com" ]; then
     sudo a2ensite 424-leanschi.conf
 else
     sudo a2dissite 424-leanschi.conf
