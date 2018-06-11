@@ -74,5 +74,15 @@ else
     sudo a2dissite 426-*.conf
 fi
 
+# bergsportoutlet.at
+# -------------------
+sudo cp /usr/local/vagrant/hosts/427-* /etc/apache2/sites-available/
+
+if [ -d "/var/www/bergsportoutlet.at" ]; then
+    sudo a2ensite 427-*.conf
+else
+    sudo a2dissite 427-*.conf
+fi
+
 # restart apache
 sudo service apache2 restart
