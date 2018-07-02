@@ -84,5 +84,15 @@ else
     sudo a2dissite 427-*.conf
 fi
 
+# lorica-labo.com
+# -------------------
+sudo cp /usr/local/vagrant/hosts/428-* /etc/apache2/sites-available/
+
+if [ -d "/var/www/lorica-labo.com" ]; then
+    sudo a2ensite 428-*.conf
+else
+    sudo a2dissite 428-*.conf
+fi
+
 # restart apache
 sudo service apache2 restart
