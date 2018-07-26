@@ -94,5 +94,16 @@ else
     sudo a2dissite 428-*.conf
 fi
 
+# hydro2go.de
+# -------------------
+sudo cp /usr/local/vagrant/hosts/429-hydro2go.conf /etc/apache2/sites-available/
+
+if [ -d "/var/www/hydro2go.de" ]; then
+    sudo a2ensite 429-hydro2go.conf
+else
+    sudo a2dissite 429-hydro2go.conf
+fi
+
+
 # restart apache
 sudo service apache2 restart
