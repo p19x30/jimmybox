@@ -104,6 +104,26 @@ else
     sudo a2dissite 429-hydro2go.conf
 fi
 
+# warmlight.at
+# -------------------
+sudo cp /usr/local/vagrant/hosts/430-warmlight.conf /etc/apache2/sites-available/
+
+if [ -d "/var/www/warmlight.at" ]; then
+    sudo a2ensite 430-warmlight.conf
+else
+    sudo a2dissite 430-warmlight.conf
+fi
+
+# panorama3d.at
+# -------------------
+sudo cp /usr/local/vagrant/hosts/431-panorama3d.conf /etc/apache2/sites-available/
+
+if [ -d "/var/www/panorama3d.at" ]; then
+    sudo a2ensite 431-panorama3d.conf
+else
+    sudo a2dissite 431-panorama3d.conf
+fi
+
 
 # restart apache
 sudo service apache2 restart
