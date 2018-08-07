@@ -124,6 +124,16 @@ else
     sudo a2dissite 431-panorama3d.conf
 fi
 
+# orderlist.reger.de
+# -------------------
+sudo cp /usr/local/vagrant/hosts/432-orderlist.conf /etc/apache2/sites-available/
+
+if [ -d "/var/www/orderlist.reger.de" ]; then
+    sudo a2ensite 432-orderlist.conf
+else
+    sudo a2dissite 432-orderlist.conf
+fi
+
 
 # restart apache
 sudo service apache2 restart
