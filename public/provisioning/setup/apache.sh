@@ -134,6 +134,15 @@ else
     sudo a2dissite 432-orderlist.conf
 fi
 
+# hostmanager.sternpunkt.at
+# -------------------
+sudo cp /usr/local/vagrant/hosts/1000-hostmanager.conf /etc/apache2/sites-available/
+
+if [ -d "/var/www/hostmanager.sternpunkt.at" ]; then
+    sudo a2ensite 1000-hostmanager.conf
+else
+    sudo a2dissite 1000-hostmanager.conf
+fi
 
 # restart apache
 sudo service apache2 restart
