@@ -9,10 +9,10 @@ Vagrant.configure("2") do |config|
     # NETWORKING
     ############################################################################
 
-    config.vm.hostname = "jimmy"
+    config.vm.hostname = "magento2dev"
 
     # Private Network
-    config.vm.network "private_network", ip: "192.168.33.11"
+    config.vm.network "private_network", ip: "192.168.8.10"
 
     # port forwarding must be enabled for vagrant share
     config.vm.network "forwarded_port", guest: 80, host: 8080, auto_correct: true
@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
     ############################################################################
 
     # DEFAULT:
-    config.vm.synced_folder "./public", "/var/www", :mount_options => ["dmode=777", "fmode=777"]
+    config.vm.synced_folder "./magento2/public", "/var/www", :mount_options => ["dmode=777", "fmode=777"]
 
     # NFS:
     # you should try NFS share - it performs much better than the default synced folder!
